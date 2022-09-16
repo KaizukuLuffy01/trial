@@ -1,7 +1,7 @@
 
 
 
-import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import { BrowserRouter as Router,Route,Routes ,HashRouter} from 'react-router-dom';
 
 
 import React from "react"
@@ -42,10 +42,10 @@ function App() {
   // window.addEventListener("contextmenu", (e) => e.preventDefault())
 
   return (
-   <Router>
-    {/* <Navbar/> */}
-   <Routes>
-   <Route exact path='/' element={<Header/>}/>
+
+   <HashRouter>
+    <Routes>
+    <Route exact path='/' element={<Header/>}/>
    <Route exact path='/working' element={<Working/>}/>
    <Route path='/services' element={<Services/>}/>
    <Route exact path='/login' element={<Login/>}/>
@@ -69,11 +69,9 @@ function App() {
 
    <Route exact path='/presc' element={<Prescription/>} />
    <Route exact path='/dash/presc/patient' element={<LastPresc/>} />
-      
     </Routes>
-
-    {/* <Footer/> */}
-   </Router>
+   
+    </HashRouter>
   );
 }
 

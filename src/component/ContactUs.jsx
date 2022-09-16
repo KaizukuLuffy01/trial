@@ -58,13 +58,12 @@ const ContactUs = () => {
         email: "",
         department: "",
         message: "",
-        }
-      );
-      if(!loading){
-        history("/contact")
-        // alert.success("sent")
+        });
+      // if(!loading){
+      //   history("/contact")
+      //   // alert.success("sent")
         
-      }
+      // }
     }
   }, [dispatch, loading, error, alert]);
 
